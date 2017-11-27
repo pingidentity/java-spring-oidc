@@ -1,0 +1,19 @@
+<!DOCTYPE html>
+
+<html xmlns:th="http://www.thymeleaf.org" th:replace="~{fragments/layout :: layout (~{::body},'login')}">
+
+<body>
+
+<div th:fragment="content">
+    <h1>Login screen</h1>
+
+    <p>
+        This page is the login screen.
+    </p>
+</div>
+
+<script type="text/javascript" th:fragment="scripts">
+</script>
+
+</body>
+</html>

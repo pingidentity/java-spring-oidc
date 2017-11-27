@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+
+<html xmlns:th="http://www.thymeleaf.org" th:replace="~{fragments/layout :: layout (~{::body},'refresh')}">
+
+<body>
+
+<div th:fragment="content">
+    <p>This page displays the refresh token</p>
+
+    <div style="margin-top: 50px;">
+        <table class="table table-hover">
+            <tbody>
+            <tr>
+                <td>Refresh Token</td>
+                <td th:text="${refresh_token}"></td>
+            </tr>
+            </tbody>
+        </table>
+    </div>
+</div>
+
+<script type="text/javascript" th:fragment="scripts">
+        $(document).ready(function() {
+            setActive('refresh_token');
+        });
+    </script>
+
+</body>
+</html>

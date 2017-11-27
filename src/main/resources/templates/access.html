@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+
+<html xmlns:th="http://www.thymeleaf.org" th:replace="~{fragments/layout :: layout (~{::body},'access')}">
+
+<body>
+
+<div th:fragment="content">
+    <p>This page displays the access token</p>
+
+    <div class="panel panel-default">
+        <div class="panel-heading">
+            <h3 class="panel-title">
+                Access Token
+            </h3>
+        </div>
+        <div class="panel-body">
+            <table class="table table-hover">
+                <thead class="thead-inverse">
+                    <tr>
+                        <th>Claim</th>
+                        <th>Value</th>
+                    </tr>
+                </thead>
+                <tbody>
+                    <tr>
+                        <td>Subject</td>
+                        <td th:text="${subject}"></td>
+                    </tr>
+                    <tr>
+                        <td>Expires At</td>
+                        <td th:text="${expiresAt}"></td>
+                    </tr>
+                    <tr>
+                        <td>Client ID</td>
+                        <td th:text="${client_id}"></td>
+                    </tr>
+                    <tr>
+                        <td>Scopes</td>
+                        <td th:text="${scopes}"></td>
+                    </tr>
+                </tbody>
+            </table>
+        </div>
+    </div>
+</div>
+
+<script type="text/javascript" th:fragment="scripts">
+        $(document).ready(function() {
+            setActive('access_token');
+        });
+    </script>
+
+</body>
+</html>

@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+
+<html xmlns:th="http://www.thymeleaf.org" th:replace="~{fragments/layout :: layout (~{::body},'authcode')}">
+
+<body>
+
+<div th:fragment="content">
+    <p>This page displays the authorization code</p>
+
+    <div style="margin-top: 50px;">
+        <table class="table table-hover">
+            <tbody>
+            <tr>
+                <td>Authorization Code</td>
+                <td th:text="${authcode}"></td>
+            </tr>
+            </tbody>
+        </table>
+    </div>
+</div>
+
+<script type="text/javascript" th:fragment="scripts">
+        $(document).ready(function() {
+            setActive('authcode');
+        });
+    </script>
+
+</body>
+</html>

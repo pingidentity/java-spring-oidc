@@ -1,0 +1,22 @@
+<!DOCTYPE html>
+
+<html xmlns:th="http://www.thymeleaf.org" th:replace="~{fragments/layout :: layout (~{::body},'index')}">
+
+<body>
+
+  <div th:fragment="content">
+    <h1>Java OIDC Sample</h1>
+
+    <p>
+      This page is unprotected by Ping Federate.
+    </p>
+  </div>
+
+  <script type="text/javascript" th:fragment="scripts">
+    $(document).ready(function() {
+      setActive('home');
+    });
+  </script>
+
+</body>
+</html>
